@@ -14,12 +14,19 @@
             </div>
             <br><br>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem; ">
                         <img src="https://covid19.go.id/storage/app/uploads/public/60f/a9d/f3a/60fa9df3a03c2631844942.jpeg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title"> <a href="https://covid19.go.id/berita/data-vaksinasi-covid-19-update-23-juli-2021">DATA VAKSINASI COVID-19 (UPDATE PER 23 JULI 2021)</a> </h5>
                             <a href="https://covid19.go.id/berita/data-vaksinasi-covid-19-update-23-juli-2021" class="btn btn-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem; ">
+                        <img src="https://covid19.go.id/storage/app/uploads/public/60f/a9d/bbe/60fa9dbbeecd9427923440.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"> <a href="https://covid19.go.id/masyarakat-umum/vaksin-covid-19-terbukti-efektif-mengurangi-tingkat-kematian">VAKSIN COVID-19 TERBUKTI EFEKTIF MENGURANGI TINGKAT KEMATIAN</a> </h5>
+                            <a href="https://covid19.go.id/masyarakat-umum/vaksin-covid-19-terbukti-efektif-mengurangi-tingkat-kematian" class="btn btn-primary">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -30,6 +37,7 @@
 <style>
 img{
     width: 100px;
+    
 }
 .card-title a{
     color: black;
