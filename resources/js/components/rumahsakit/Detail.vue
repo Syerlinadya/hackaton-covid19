@@ -1,43 +1,28 @@
 <template>
     <div>
         <navbar-component></navbar-component>
-        <div class="content-wrapper">
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Detail</h1>
-                        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Detail Rumah Sakit </h3>
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="m-0">Detail Anggota</h4>
-                                </div>
-                                <div class="card-body text-justify">
-                                    <h5 class="mb-3">{{siswa.nama_siswa}}</h5>
+            <div class="col-md-12 ">
+                <div class="card ">
+                    <div class="card-header">
+                            <div class="card-body text-justify">
+                                <h5 class="mb-3">{{rumahsakit.nama}}</h5>
+                                <h6>Alamat : {{rumahsakit.alamat}}</h6>
+                                
 
-                                    <h6>Tanggal Lahir</h6>
-                                    <p class="card-text">{{siswa.tgl_lahir}}</p>
-
-                                    <h6>Jenis Kelamin</h6>
-                                    <p class="card-text">{{siswa.jk}}</p>
-
-                                    <h6>Alamat</h6>
-                                    <p class="card-text">{{siswa.alamat}}</p>
-
-                                    <h6>Kelas</h6>
-                                    <p class="card-text">{{siswa.nama_kelas}}</p>
-
-                                    <router-link class="btn btn-primary" to="/siswa">Kembali</router-link>
-                                </div>
+                                <h6>Provinsi: {{rumahsakit.nama_provinsi}}</h6>
+                                
+                                 <button type="button" @click="hapus" class="btn btn-danger">Hapus</button>                                                     
+                                <router-link class="btn btn-primary" to="/rumahsakit">Kembali</router-link>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -49,15 +34,15 @@
 export default {
     data() {
         return {
-            siswa : {}
+           rumahsakit : {}
         }
     },
     created() {       
-        this.axios.get(`http://localhost:8000/api/siswa/${this.$route.params.id}`, { headers: { 'Authorization': `Bearer ` + this.$store.state.token } })
-                  .then(res => {
-                      this.siswa = res.data
-                  })
-                  .catch(err => console.log(err))
+        axios.get(`http://localhost:8000/api/rumahsakit/${this.$route.params.id}`)
+        .then(res => {
+            this.rumahsakit = res.data
+        })
+        .catch(err => console.log(err))
     }
 }
 </script>

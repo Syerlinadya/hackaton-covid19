@@ -10,7 +10,7 @@
             </div>  
 
             <div class="row">
-                <div class="col-md-6 ">
+                <div class="col-md-12 ">
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">Rumah Sakit </h3>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <router-link :to="{name: 'rumahsakit'}"></router-link> Kembali
+                                <router-link to="/rumahsakit">Kembali</router-link> 
                             </div>
                         </form>
                     </div>
@@ -67,7 +67,7 @@ export default {
     },
     methods : {
         edit() {
-            this.axios.patch(`http://localhost:8000/api/rumahsakit/edit/${this.$route.params.id}`, this.rumahsakit)
+            axios.put(`http://localhost:8000/api/rumahsakit/edit/${this.$route.params.id}`, this.rumahsakit)
                       .then( res => {
                           this.$router.push('/rumahsakit');
                       })

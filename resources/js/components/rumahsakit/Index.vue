@@ -60,7 +60,7 @@ export default {
     },
     methods : {
         hapus(id) {
-            axios.delete(`http://localhost:8000/api/rumahsakit/${id}`)
+            this.axios.delete(`http://localhost:8000/api/rumahsakit/${id}`)
             .then( res => {
                 let i = this.rumahsakit.map(item => item.id).indexOf(id);
                 this.rumahsakit.splice(i, 1);

@@ -9,7 +9,7 @@
                 </div>
             </div>  
             <div class="row">
-                <div class="col-md-6 ">
+                <div class="col-md-12 ">
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">Rumah Sakit Baru</h3>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <router-link to="/rumahsakit"></router-link> Kembali
+                                <router-link to="/rumahsakit">Kembali</router-link> 
                             </div>
                         </form>
                     </div>

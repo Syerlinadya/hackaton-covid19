@@ -10,7 +10,7 @@ Route::post('/rumahsakit',[RumahSakitController::class, 'store']);
 
 Route::get('/rumahsakit/{id}',[RumahSakitController::class, 'show']);
 Route::put('/rumahsakit/edit{id}',[RumahSakitController::class, 'update']);
-Route::delete('/rumahsakit/{id}',[RumahSakitController::class, 'update']);
+Route::delete('/rumahsakit/{id}',[RumahSakitController::class, 'destroy']);
 
 Route::get('/provinsi',[ProvinsiController::class, 'index']);
 Route::post('/provinsi',[ProvinsiController::class, 'store']);
