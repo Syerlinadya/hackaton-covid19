@@ -7,7 +7,7 @@
 			<div class="col s12 m6 l6 center-align">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Terkonfirmasi</h5>
+						<h5 class="card-title bold">Terkonfirmasi</h5>
                             <p class="card-text">
                                 3,082,410
                             </p>

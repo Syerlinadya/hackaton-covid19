@@ -3,12 +3,17 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Dashboard from '../components/Dashboard.vue';
+import Vaksin from '../components/Vaksin.vue';
 
 export const routes = [
     {
         name: 'beranda',
         path:'/',
         component: Dashboard,
+    },{
+        name: 'vaksin',
+        path:'/vaksin',
+        component: Vaksin,
     }
 ]
 

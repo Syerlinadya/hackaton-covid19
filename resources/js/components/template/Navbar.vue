@@ -11,7 +11,7 @@
                         <router-link class="nav-link active" aria-current="page" :to="{ name: 'beranda'}">Beranda</router-link> 
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link active" aria-current="page" :to="{ name: 'vaksin'}">Vaksinasi Covid</router-link> 
+                        <router-link class="nav-link active" aria-current="page" :to="{ name: 'vaksin'}">Vaksinasi Covid-19</router-link> 
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link active" aria-current="page" :to="{ name: 'rumahsakit'}">Rumah Sakit</router-link> 
@@ -21,7 +21,11 @@
         </div>
     </nav>
 </template>
-
+<style>
+    .active:hover{
+        font: bold;
+    }
+</style>
 <script>
 export default {    
 }
