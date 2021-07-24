@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,7 +10,6 @@ use Illuminate\Support\Facades\Validator;
 
 class RumahSakitController extends Controller
 {
-    
     public function index()
     {
         $rsakit = DB::table('rsakit')->join('provinsis', 'rsakit.provinsi_id', '=', 'provinsis.id')
@@ -31,7 +32,7 @@ class RumahSakitController extends Controller
         }
 
         $rsakit = RumahSakit::create([
-            'nama => $request->nama,
+            'nama' => $request->nama,
             'alamat' => $request->alamat,
             'provinsi_id' => $request->provinsi_id
         ]);

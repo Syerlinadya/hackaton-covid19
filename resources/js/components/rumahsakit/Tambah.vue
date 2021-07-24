@@ -33,15 +33,12 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <button type="submit" class="btn btn-light" style="color: blue;">
-                                    <router-link :to="{name: 'rumahsakit'}"></router-link> Kembali
-                                </button>
+                                <router-link to="/rumahsakit"></router-link> Kembali
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-               
         </div>
     </div>
 </template>
@@ -55,16 +52,18 @@ export default {
         }
     },
     created() {        
-        this.axios.get('http://localhost:8000/api/provinsi')
+        axios.get('http://localhost:8000/api/provinsi')
         .then( res => {
             this.provinsi = res.data
         })
     },
     methods : {
         tambah() {
-            this.axios.post('http://localhost:8000/api/rumahsakit', this.rumahsakit)
+            axios.post('http://localhost:8000/api/rumahsakit', this.rumahsakit)
             .then( res => {
-                this.$router.push('/rumahsakit');
+                this.$router.push({
+                    name:"rumahsakit"
+                });
             })
             .catch( err => console.log(err))
         }

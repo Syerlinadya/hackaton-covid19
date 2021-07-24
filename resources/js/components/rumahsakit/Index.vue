@@ -53,14 +53,14 @@ export default {
         }
     },
     created() {
-        this.axios.get('http://localhost:8000/api/rumahsakit')
+        axios.get('http://localhost:8000/api/rumahsakit')
         .then( res => {
             this.rumahsakit = res.data
         })
     },
     methods : {
         hapus(id) {
-            this.axios.delete(`http://localhost:8000/api/rumahsakit/${id}`)
+            axios.delete(`http://localhost:8000/api/rumahsakit/${id}`)
             .then( res => {
                 let i = this.rumahsakit.map(item => item.id).indexOf(id);
                 this.rumahsakit.splice(i, 1);
