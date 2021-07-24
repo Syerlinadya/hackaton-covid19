@@ -6,7 +6,7 @@ import Dashboard from '../components/Dashboard.vue';
 
 export const routes = [
     {
-        name: 'dashboard',
+        name: 'beranda',
         path:'/',
         component: Dashboard,
     }

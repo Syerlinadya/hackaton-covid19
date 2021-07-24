@@ -20,8 +20,8 @@ Vue.use(require('vue-moment'));
 Vue.use(VueAxios,axios);
 
 
-Vue.component('navbar-component', require('./template/Navbar.vue').default);
-Vue.component('sidebar-component', require('./template/Sidebar.vue').default);
+Vue.component('navbar-component', require('./components/template/Navbar.vue').default);
+Vue.component('card-component', require('./components/template/Card.vue').default);
 
 const app = new Vue({
     el: '#app',
