@@ -1,8 +1,19 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 // Variables
 @import 'variables';
+$fa-font-path:"../webfonts";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Admin LTE, Fontawesome
+@import '~admin-lte/dist/css/adminlte.css';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
