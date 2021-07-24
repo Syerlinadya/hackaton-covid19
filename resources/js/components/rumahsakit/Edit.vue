@@ -55,23 +55,23 @@ export default {
     },
     created() {        
         axios.get(`http://localhost:8000/api/rumahsakit/${this.$route.params.id}`)
-                  .then((res) => {
-                      this.rumahsakit = res.data
-                  })
-                  .catch(err => console.log(err));
+            .then((res) => {
+                this.rumahsakit = res.data
+            })
+            .catch(err => console.log(err));
         axios.get('http://localhost:8000/api/provinsi')
-                  .then( res => {
-                      this.provinsi = res.data
-                  })
-                  .catch(err => console.log(err));
+            .then( res => {
+                this.provinsi = res.data
+            })
+            .catch(err => console.log(err));
     },
     methods : {
         edit() {
-            axios.put(`http://localhost:8000/api/rumahsakit/edit/${this.$route.params.id}`, this.rumahsakit)
-                      .then( res => {
-                          this.$router.push('/rumahsakit');
-                      })
-                      .catch( err => console.log(err))
+            axios.put(`http://localhost:8000/api/rumahsakit/${this.$route.params.id}`, this.rumahsakit)
+                .then( res => {
+                    this.$router.push('/rumahsakit');
+                })
+                .catch( err => console.log(err))
         }
     }
 }
